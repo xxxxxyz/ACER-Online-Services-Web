@@ -67,6 +67,14 @@ picture {
   }
 }
 
+/* public pattern */
+
+.lead-center {
+    font-size: 20px;
+    line-height: 29px;
+    padding-top: 12px;
+    text-align: center;
+}
 
 /* navigation style */
 .navbar {
@@ -167,6 +175,59 @@ picture {
     font-size: 18px;
 }
 
+/* eligibility section */
+.eligibility {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    top: 1119px;
+    width: 100%;
+    padding: 0 12px;
+    background: var(--bg-blue);
+    font-family: var(--ff-heading);
+    font-weight: 400;
+    text-align: center;
+    align-items: center;
+    color: #fff;
+}
+
+.elig-title {
+    padding-top: 82px;
+}
+
+.m-header {
+    font-size: 37px;
+    line-height: 141.24%;;
+}
+
+.elig-icons {
+    display: flex;
+    box-sizing: border-box;
+    justify-content: center;
+    flex-wrap: wrap;
+    align-items: flex-start;
+    padding-top: 68px;
+    padding-bottom: 96px;
+}
+
+.icon-group {
+    padding: 0 105px 20px 105px;
+}
+
+.lg-icon {
+    height: 127.5px;
+    width: 127.5px;
+    align-items: center;
+}
+
+.lg-icon img {
+    height: 127.5px;
+    margin: auto;
+    padding-bottom: 20px;
+}
+
+
+
 
 /* different devices */
 @media screen and (max-width: 980px) {
@@ -189,6 +250,11 @@ picture {
     .sm-title, .lg-title, .content-detail {
         width: 100%;
         height: 100%;
+    }
+    
+    /* eligibility */
+    .eligibility {
+        height: auto;
     }
 
 }
