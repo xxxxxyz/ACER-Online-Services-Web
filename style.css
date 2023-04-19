@@ -68,8 +68,6 @@ picture {
 }
 
 /* public pattern */
-body {
-}
 
 h1 {
     font-family: var(--ff-heading);
@@ -85,7 +83,15 @@ h2 {
     font-weight: 500;
     line-height: 120%;
     margin: 0;
+    color: #333;
     padding-bottom: 15px;
+}
+
+h5 {
+    font-family: var(--ff-heading);
+    font-size: 16px;
+    line-height: 140%;
+    letter-spacing: -0.01;
 }
 
 p {
@@ -106,6 +112,7 @@ p {
 
 .lead-center {
     text-align: center;
+    margin: 0 auto;
 }
 
 .lead-bold {
@@ -363,7 +370,7 @@ p {
     width: 100%;
     justify-content: space-around;
     text-align: center;
-    max-width: 1005px;
+    max-width: 1000px;
     margin: 75px auto;
 }
 
@@ -399,6 +406,85 @@ p {
     width: 79%;
     height: 2px;
 }
+
+/* discover section style */
+.discover {
+    position: absolute;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+    padding: 120px auto;
+    top: 3952px;
+    width: 100%;
+    height: auto;
+}
+
+.discover-title {
+    text-align: center;
+    margin-top: 120px;
+    padding-bottom: 0%;
+}
+
+/* card style bootstrap */
+.discover-card {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 120px;
+    padding-top: 30px;
+    max-height: 310px;
+}
+
+.dis-cards-group{
+    display: flex;
+}
+
+.dis-cards-group::-webkit-scrollbar {
+    width: 0;
+}
+
+.card {
+    height: 290px;
+    width: 263px;
+    font-family: var(--ff-primary);
+    transition: all .3s ease-in-out;
+}
+
+.card:hover {
+    transform: scale(1.05);
+
+}
+
+.card img {
+    max-width: 100%;
+    max-height: 100%;
+}
+
+.card-label-group {
+    display: flex;
+    align-items: center;
+    margin: 0 auto 15px;
+
+}
+
+.card-date {
+    font-size: 9px;
+    line-height: 140%;
+    letter-spacing: -0.01;
+    font-weight: 400;
+    margin-right: 0;
+    padding: 0;
+}
+
+.card-label {
+    text-align: center;
+    font-weight: 500;
+    font-size: 10px;
+    line-height: 140%;
+    background: var(--light);
+    padding: 1.5px 8px;
+    border-radius: 1px;
+}
+
 
 /* different devices */
 @media screen and (max-width: 983px) {
