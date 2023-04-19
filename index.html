@@ -38,11 +38,11 @@
 
     <!-- welcome section -->
     <section class="welcome img-welcome left">
-        <div class="content ">
+        <div class="content">
             <div class="sm-title">Challenge Your Student on the World Stage</div>
             <div class="lg-title">A test page to demonstrate my skills</div>
             <div class="content-detail lead-left">Motivate top-performing students, assess their progress, and celebrate their achievements.</div>
-            <button type="button" class="lg-btn">Find out more</button>
+            <button type="button" class="lg-btn welcome-btn">Find out more</button>
         </div>
     </section>
 
@@ -52,20 +52,20 @@
             <h1>Available for years 4, 6 and 8</h1>
             <div class="lead-center">Online & multiple-choice</div>
         </div>
-        <div class="icons-group elig-icons">
-            <div class="math icon-group">
+        <div class="row row-cols-md-2 row-cols-lg-3 row-cols-1 icons-group elig-icons">
+            <div class="col math icon-group">
                 <div class="lg-icon">
                     <img src="./assets/images/Group211-icon_mathmatics.svg" alt="math-icon">
                 </div>
                 <div class="lead-center">Mathematics</div>
             </div>
-            <div class="science icon-group">
+            <div class="col science icon-group">
                 <div class="lg-icon">
                     <img src="./assets/images/icon_scientists.svg" alt="science-icon">
                 </div>
                 <div class="lead-center">Science</div>
             </div>
-            <div class="reading icon-group">
+            <div class="col reading icon-group">
                 <div class="lg-icon">
                     <img src="./assets/images/icon_reading.svg" alt="reading-icon">
                 </div>
@@ -75,9 +75,9 @@
     </section>
 
     <!-- achievement section -->
-    <section class="achievement img-achive left">
+    <section class="achievement left">
         <div class="ach-bg-mask"></div>
-        <div class="content">
+        <div class="achievement-content">
             <h2>Rewarding student achievement</h2>
             <div class="content-detail lead-left">Motivate top-performing students, assess their progress, and celebrate their achievements.</div>
             <button type="button" class="sm-btn"><span>Certificate and award criteria</span><span class="fa-solid fa-caret-right fa-sm " id="btn-icon"></span>    
@@ -85,10 +85,10 @@
         </div>
     </section>
     <!-- challenge section -->
-    <section class="challenge center">
-        <div class="challenge-bg-mask"></div>
+    <section class="challenge">
+        <div></div>
         <div class="challenge-content">
-            <div class="title">
+            <div class="challenge-title">
                 <h1>The 2023 challenge</h1>
                 <div class="lead-center-l">Participation in the challenge is open to all registered Australian schools, with students required to be enrolled in a participating school to take part.</div>
             </div>
@@ -150,7 +150,7 @@
 
         <!-- card group -->
         <div class="discover-card">
-            <div class="row row-cols-4 g-4 dis-cards-group ">
+            <div class="row row-cols-1 dis-cards-group row-cols-md-3 row-cols-lg-4">
                 <div class="col">
                     <div class="card">
                         <img src="./assets/images/RMIT-Vietnam_-_rd.png" class="card-img-top" alt="card-img">
@@ -203,8 +203,53 @@
         </div>
     </section>
     <!-- contact form -->
+    <section class="contact">
+        <div class="contact-content">
+            <h2>Contact us to find out more</h2>
+            <p class="p-small">One of our friendly staff members will contact you within 24 hours</p>
+            <form class="container">
+                <div class="row row-cols-lg-2 row-cols-md-1 justify-content-center">
+                    <div class="col-12 col-md-12 col-lg-4">
+                        <input class="form-input" type="name" placeholder="My name">
+                    </div>
+                    <div class="col-12 col-md-12 col-lg-4">
+                        <input class="form-input" type="email" placeholder="Email address">
+                    </div>
+                </div>
+                <div class="row row-cols-lg-2 row-cols-md-1 justify-content-center">
+                    <div class="col-12 col-md-12 col-lg-4">
+                        <input class="form-input" type="name" placeholder="School name">
+                    </div>
+                    <div class="col-12 col-md-12 col-lg-4 custom-select">
+                        <select class="country-select" placeholder="Country">
+                            <option value="default">Country</option>
+                            <option value="zu">Australia</option>
+                            <option value="nz">New Zealand</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="row row-cols-lg-2 row-cols-md-1 justify-content-center">
+                    <!-- <div class="col-12 col-md-12 col-lg-4 space"> -->
+                    </div>
+                    <div class="col-12 col-md-12 col-lg-12">
+                        <a class="add-message" href="#">Add message(optional)</a>
+                    </div>                   
+                </div>
+                <div class="row row-cols-lg-2 row-cols-md-1 justify-content-center">
+                    <!-- <div class="col-12 col-md-12 col-lg-4 space"> -->
+                    </div>
+                    <div class="col-12 col-md-12 col-lg-12">
+                        <button class="send-btn">Send <span class="fa-solid fa-caret-right fa-sm"></span></button>
+                    </div>             
+                </div>
+            </form>
+        </div>
+    </section>
     <!-- footer -->
-    <footer></footer>
+    <footer>
+        <img src="./assets/images/ACER logo_white.svg" alt="brand">
+        <p class="copy-right">© 2023 ACER</p>
+    </footer>
 
     
 </body>

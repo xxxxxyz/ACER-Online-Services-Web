@@ -68,7 +68,6 @@ picture {
 }
 
 /* public pattern */
-
 h1 {
     font-family: var(--ff-heading);
     font-size: 37px;
@@ -83,7 +82,7 @@ h2 {
     font-weight: 500;
     line-height: 120%;
     margin: 0;
-    color: #333;
+    color: var(--dark);
     padding-bottom: 15px;
 }
 
@@ -95,11 +94,19 @@ h5 {
 }
 
 p {
-    font-family: 'Roboto',;
+    font-family: 'Roboto', sans-serif;
     line-height: 140%;
     font-size: 16px;
     font-weight: 400;
     margin-top: 10px;
+}
+
+.p-small {
+    font-size: 14px;
+    font-family: 'Roboto', sans-serif;
+    line-height: 140%;
+    margin: 0;
+    color: var(--dark);
 }
 
 .lead, .lead-center {
@@ -185,8 +192,9 @@ p {
     box-shadow: 0px 0px 10px rgba(0,0,0,0.2);
 }
 
-.navbar-brand {
+.navbar-brand img {
     margin-right: 0;
+    float: left;
 }
 
 .brand-text{
@@ -194,7 +202,6 @@ p {
     left: 0;
     width: 130px;
     margin-right: 64px;
-    padding-left: 12px;
     color: var(--dark);
     font-family: var(--ff-primary);
     font-weight: 500;
@@ -212,7 +219,6 @@ p {
 
 /* welcome section style */
 .welcome {
-    position: absolute;
     height: 1024px;
     font-family: var(--ff-primary);
     color: var(--black);
@@ -260,8 +266,6 @@ p {
 .eligibility {
     display: flex;
     flex-direction: column;
-    position: absolute;
-    top: 1119px;
     width: 100%;
     height: auto;
     padding: 0px 12px;
@@ -305,11 +309,7 @@ p {
 
 /* achievement section style */
 .achievement {
-    position: absolute;
-    top: 1611.5px;
-}
-
-.img-achive {
+    position: relative;
     background-image: url("./assets/images/bgImage_achievement.png");
     width: 100%;
     height: 1024px; 
@@ -318,12 +318,20 @@ p {
 }
 
 .ach-bg-mask {
+    position: relative;
     float: left;
-    top: 1611.5px;
     height: 1024px;
-    width: 1024px;
+    width: 71%;
     z-index: 10;
     background: linear-gradient(90deg, #FFFFFF 22.22%, rgba(255, 255, 255, 0) 100%);
+}
+
+.achievement-content {
+    position: absolute;
+    z-index: 999;
+    float: left;
+    top: 400px;
+    left: 150px;
 }
 
 .sm-btn span {
@@ -332,36 +340,19 @@ p {
 
 /* challenge section style */
 .challenge {
-    position: absolute;
+    position: relative;
     color: #fff;
-    top: 2638px;
+    padding-top: 130px;
     background-image: url(./assets/images/bgImage_challenge.png);
     background-size: cover;
-    width: 100%;
     background-position: right;
     background-repeat: no-repeat;
-    padding-top: 130px;
-    padding-bottom: 124px;
-}
-
-.challenge-content {
-    z-index: 99;
-}
-
-.challenge-bg-mask {
-    position: absolute;
-    top: 0px;
-    z-index: 1;
-    float: left;
-    height: 100%;
-    width: 40%;
-    background: linear-gradient(-90deg, rgba(22, 71, 86, 0) 0%, #164756 100%);
-
 }
 
 .lead-center-l {
     text-align: center;
-    width: 830px;
+    width: 70%;
+    max-width: 830px;
     margin: 23px auto;
 }
 
@@ -409,12 +400,10 @@ p {
 
 /* discover section style */
 .discover {
-    position: absolute;
     left: 0;
     right: 0;
     margin: 0 auto;
     padding: 120px auto;
-    top: 3952px;
     width: 100%;
     height: auto;
 }
@@ -431,7 +420,7 @@ p {
     justify-content: center;
     margin-bottom: 120px;
     padding-top: 30px;
-    max-height: 310px;
+    height: fit-content;
 }
 
 .dis-cards-group{
@@ -445,8 +434,10 @@ p {
 .card {
     height: 290px;
     width: 263px;
+    margin: 20px 0;
     font-family: var(--ff-primary);
     transition: all .3s ease-in-out;
+    box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.25);
 }
 
 .card:hover {
@@ -485,9 +476,109 @@ p {
     border-radius: 1px;
 }
 
+/* form section style */
+.contact {
+    display: block;
+    width: 100%;
+    padding: 70px 0 60px;
+    text-align: center;
+    background: var(--light);
+}
+
+.contact-content {
+    max-width: 1140px;
+    margin: 0 auto;
+}
+
+form {
+    margin-top: 43px;
+}
+
+.form-input, .country-select {
+    width: 100%;
+    max-width: 369px;
+    height: 40px;
+    box-sizing: border-box;
+    padding: 6px auto 5px 8px;
+    margin: 0 15px 14px;
+    border: 1px solid var(--dark);
+    border-radius: 3px;
+}
+
+::placeholder {
+    padding-left: 8px;
+    font-family: var(--ff-primary);
+    font-size: 20px;
+    line-height: 144%;
+    color: var(--dark-gray);
+}
+
+.country-select {
+    padding-left: 8px;
+    font-family: var(--ff-primary);
+    font-size: 20px;
+    line-height: 144%;
+    color: var(--dark-gray);
+} 
+
+.add-message {
+    position: relative;
+    font-family: 'Roboto', sans-serif;
+    font-size: 16px;
+    line-height: 140%;
+    color: var(--black);
+    width: 171px;
+    padding: 0;
+    text-align: left;
+}
+
+.add-message:hover {
+    color: var(--black);
+}
+
+.send-btn {
+    background: var(--lg-btn-green);
+    border: none;
+    color: #fff;
+    padding: 4px 13px;
+    margin-top: 13px;
+    border-radius: 65px;
+    font-size: 15px;    
+    font-family: var(--ff-primary);
+    font-weight: 500;
+    line-height: 140%;
+    transition: all .3s ease-in-out;
+}
+
+.send-btn:hover {
+    transform: scale(0.95);
+    background: var(--dark);
+}
+
+/* footer style */
+footer {
+    display: inline-block;
+    background: var(--dark);
+    width: 100%;
+    padding: 20px 150px;
+}
+
+footer img {
+    float: left;
+    width: 98px;
+    height: 32px;
+}
+
+.copy-right {
+    font-size: 14px;
+    font-family: 'Roboto', sans-serif;
+    line-height: 140%;
+    text-align: right;
+    color: #fff;
+}
 
 /* different devices */
-@media screen and (max-width: 983px) {
+@media screen and (min-width: 540px) and (max-width: 983px) {
     /* nav section */
     .container-fluid {
         padding-left: 20px;
@@ -502,6 +593,7 @@ p {
         display: flex;
         flex-direction: column;
         left: 20px;
+        width: 80%;
     }
 
     .sm-title, .lg-title, .content-detail {
@@ -516,19 +608,16 @@ p {
 
     /* achievement  */
     .achievement{
-        position: relative;
         height: auto;
-        width: 100%;
-        margin-top: 200px;
     }
 
-    .ach-bg-mask{
-        margin-top: 100px;
-        height: 500px;
-    }
-
-    .img-achive {
-        background-image: none;
+    .achievement-content {
+        position: absolute;
+        width: 80%;
+        z-index: 999;
+        float: left;
+        margin: auto;
+        left: 20px;
     }
 
     .sm-btn {
@@ -536,8 +625,74 @@ p {
         margin-left: 12px;
     }
 
-    .lead-left, .lead-center {
-        width: 70%;
+    /* challenge */
+    .challenge-title{
+        display: block;
+    }
 
+    /* form */
+    .space {
+        display: none;
+    }
+}
+
+
+@media screen and (min-width: 375px) and (max-width: 540px) {
+    h1 {
+        font-size: 30px;
+    }
+
+    /* navigation */
+    .navbar {
+        height: auto;
+    }
+
+    .brand-text {
+        margin: 0;
+    }
+
+    .navbar-toggler {
+        float: right;
+    }
+
+    /* welcome */
+    .content {
+        display: block;
+        padding-right: 10px;
+        top: 220px; 
+        width: 80%; 
+        height: fit-content;
+        overflow: hidden;
+    }
+
+    .sm-title {
+        width: 80%;
+        font-size: 14px;
+
+    }
+
+    .lg-title {
+        width:50%;
+        font-size: 32px;
+    }
+
+    .content-detail {
+        width: 80%;
+        font-size: 20px;
+    }
+
+    .welcome-btn {
+        margin-top: 80px;
+    }
+
+    /* eligibility */
+    .eligibility {
+        width: 100%;
+        padding: 0 10px;
+    }
+    
+    /* achievement */
+    .achievement-content {
+        left: 20px;
     }
 }
